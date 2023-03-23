@@ -13,13 +13,13 @@ function DebounceSelect({ fetchOptions, debounceTimeout = 300, ...props }) {
       setOptions([]);
       setFetching(true);
 
-      fetchOptions(value, props.curMembers).then((newOptions) => {
+      fetchOptions(value, props.curmembers).then((newOptions) => {
         setOptions(newOptions);
         setFetching(false);
       });
     };
     return debounce(loadOptions, debounceTimeout);
-  }, [debounceTimeout, fetchOptions, props.curMembers]);
+  }, [debounceTimeout, fetchOptions, props.curmembers]);
   return (
     <Select
       labelInValue
@@ -40,7 +40,7 @@ function DebounceSelect({ fetchOptions, debounceTimeout = 300, ...props }) {
   );
 }
 
-async function fetchUserList(search, curMembers) {
+async function fetchUserList(search, curmembers) {
   return db
     .collection("users")
     .where("keywords", "array-contains", search)
@@ -54,7 +54,7 @@ async function fetchUserList(search, curMembers) {
           value: doc.data().uid,
           photoURL: doc.data().photoURL,
         }))
-        .filter((opt) => !curMembers.includes(opt.value));
+        .filter((opt) => !curmembers.includes(opt.value));
     });
 }
 export default function InviteMemberModal() {
@@ -99,7 +99,7 @@ export default function InviteMemberModal() {
             fetchOptions={fetchUserList}
             onChange={(newValue) => setValue(newValue)}
             style={{ width: "100%" }}
-            curMembers={currentRoom.members}
+            curmembers={currentRoom.members}
           />
         </Form>
       </Modal>
