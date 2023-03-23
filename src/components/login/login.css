@@ -5,7 +5,7 @@
 
 .icon-container img {
     position: absolute;
-    top: 10px;
+    top: 25px;
     left: 10px;
     animation: jump 1s ease-in-out infinite;
     width: 30px;

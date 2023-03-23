@@ -21,6 +21,7 @@ const SecondRowStyled = styled(Row)`
 const SpeechBubble = styled.div`
   display: inline-block;
   padding: 10px;
+  margin-top: 36px;
   background-color: rgb(106, 212, 241);
   border-radius: 10px;
 
@@ -44,6 +45,10 @@ const LeftColStyled = styled(Col)`
   h1 {
     text-align: left;
     font-size: 60px;
+    color: white; 
+  }
+  h3{
+    color:white;
   }
 `;
 
