@@ -1,0 +1,174 @@
+.icon-container {
+    position: relative;
+    height: 50px;
+}
+
+.icon-container img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    animation: jump 1s ease-in-out infinite;
+    width: 30px;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: rgb(6, 82, 103);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    color: rgb(6, 82, 103);
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.LoginWrapper {
+    max-height: 100%;
+    background-color: rgb(16, 133, 165);
+    overflow-y: auto;
+}
+
+.phone {
+    width: 300px;
+    height: 600px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    background: white;
+    position: relative;
+}
+
+.phone:before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-25px);
+}
+
+.avatar {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+.chat-room {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.bubble {
+    position: absolute;
+    max-width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: skyblue;
+}
+
+.bubble-left {
+    top: 20%;
+    left: 10%;
+}
+
+.bubble-right {
+    top: 35%;
+    right: 10%;
+}
+
+.icons {
+    position: absolute;
+    padding: 10px;
+    background-color: rgb(106, 212, 241);
+    border-radius: 10px;
+    top: 55%;
+}
+
+.icons:before {
+
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 20px 10px 0;
+    border-color: transparent rgb(106, 212, 241) transparent transparent;
+    transform: rotate(-180deg);
+
+}
+
+.icons img {
+    height: 20px;
+    margin-right: 5px;
+    width: 20px;
+}
+
+.message-input {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    background: #fff;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+    pointer-events: none;
+}
+
+.message-input[contenteditable]:empty:before {
+    content: attr(placeholder);
+    color: #ccc;
+    pointer-events: none;
+    display: inline-block;
+}
+
+
+.send-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    background: #0084ff;
+}
