@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# MultiChitChat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MultiChitChat is a real-time chat application built with React and Firebase. It allows users to communicate with each other in different chat rooms. The application is designed to be responsive and can be used on various devices.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Real-time chat:** Messages are updated in real-time using Firebase Firestore.
 
-### `npm start`
+- **Multiple chat rooms:** Users can join different chat rooms and have separate conversations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Authentication:** The application supports authentication with Firebase. Users can log in using their Google or Facebook accounts (see `handleGoogleLogin` and `handleFbLogin` in `src/components/login/index.js`).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **User information:** User information is displayed in the chat rooms (see `UserInfo.js`).
 
-### `npm test`
+- **Message display:** Each message is displayed with the sender's information and timestamp (see `Message.js`).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+- `src/App.js`: The main application component.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `src/components/chatroom/`: Contains components related to the chat room feature.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `src/components/login/`: Contains components related to user login.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `src/Firebase/`: Contains Firebase configuration and services.
 
-### `npm run eject`
+## Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. To run this project locally, you need to have Node.js and npm installed.
+2. After cloning the repository, install the dependencies with `npm install`.
+3. Start the development server with `npm start`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Note:** You need to set up your own Firebase project and update the Firebase configuration in `src/Firebase/config.js`.
